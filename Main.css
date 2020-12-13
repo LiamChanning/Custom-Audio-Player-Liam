@@ -1,0 +1,213 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+#bg{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+#bg img{
+    height: 120vh;
+    width: 105%;
+    -webkit-filter: blur(20px);
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+#blackLayer{
+    height: 100vh;
+    width: 100%;
+    background: -webkit-linear-gradient(to top,#000000,#af93fd);
+    background: linear-gradient(to top,#000000,#000000);
+    position: absolute;
+    z-index: 99;
+    color: white;
+    
+}
+#main{
+    margin-top: 3%;
+    width: 25%;
+    background: -webkit-linear-gradient(to bottom,#000000,#000000);
+    background: linear-gradient(to bottom,#ff7979,#ff7a7a);
+    border-radius: 15px;
+    position: absolute;
+    top:35%;
+    left: 15%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+}
+#head{
+    margin-left: 3%;
+    background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    left: -20%;
+}
+#image img{
+    height: 250px;
+    width: 100%;
+    margin-top: -5px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+#player{
+    padding: 25px;
+    color:#333;
+    padding-bottom: 50px;      
+}
+#songTitle{
+    width: 100px;
+    text-align: bottom;
+    font-family: 'Courier New', Courier, monospace ;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+#buttons{
+    height: 50px;
+    width: 100%;
+    margin-top: 50px;
+    position:relative;
+    top:10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#play,#next,#pre{
+    width: 50px;
+    height: 50px;
+    border: 0;
+    background: -webkit-linear-gradient(to right,#ec7a7a,#af93fd);
+    background: linear-gradient(to right,#000000,#0c0c0e);
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#next{
+    width: 30px;
+    height: 30px;
+    left: 70%;
+}
+#pre{
+    width: 30px;
+    height: 30px;
+    left: 30%;
+}
+#play img,#next img,#pre img{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#seek-bar{
+    width: 300px;
+    height: 5px;
+    background: -webkit-linear-gradient(to right,#ec7a7a,#af93fd);
+    background: linear-gradient(to right,#0a0808,#0b0a0e);
+    display: flex;
+    border-radius: 55px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+#fill{
+    height: 5px;
+    background-color:rgb(255, 255, 255);
+    border-radius: 20px;
+}
+#handle{
+    width: 8px;
+    height: 8px;
+    background-color:rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-left: -5px;
+    transform: scale(2);
+}
+#currentTime{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    top: 94%;
+    left: 23.7%;
+    transform: translate(-50%,-50%);
+    color: white;
+
+}
+#volume{
+    position: absolute;
+    top:92%;
+    left: 78%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+#volumeIcon{
+    height: 25px;
+    width: 25px;
+    background-color: mediumblue;
+    border-radius: 50%;
+}
+#volumeIcon img{
+    width: 20%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%-50%);
+}
+#decrease,#increase,#mute,#unmute{
+    height: 20px;
+    width: 27px;
+    background: -webkit-linear-gradient(to right,#ec7a7a,#af93fd);
+    background: linear-gradient(to right,#0e0808,#040405);
+    border: none;
+    outline: none;
+    border-radius: 40%;
+    font-family: fantasy;
+    font-size: 15px;
+    color:white;
+    text-align: center;
+    line-height: 10px;
+    position: relative;
+    left: 2px;
+    top: 10px;
+    cursor: pointer;
+}
+#increase{
+    left: 25px;
+    top: 10px;
+
+}
+#mute{
+    left: 10px;
+    top: 10px;
+
+}
+
+#unmute{
+    left: 19px;
+    top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
