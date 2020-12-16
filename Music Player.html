@@ -5,7 +5,16 @@
     </head>
         <div id="bg">
             <div id="blackLayer"> 
-                  </div>           
+                <img src="" />
+                <div id="instruct">
+                    <h2>
+                        INSTRUCTIONS
+                    </h2>
+                    <h4>
+                        1)Make sure the volume is at max before muting
+                    </br>
+                        2)Have fun!
+                    </h4>          
             </div>
         </div>
 
@@ -32,10 +41,9 @@
                 <div id="currentTime">00:00 /00:00</div>
 
                 <div id="volume">
-                    <button id="decrease" onclick="decreaseVolume()">-</button>
-                    <button id="mute" onclick="muteVolume()">x🕨</button>
-                    <button id="unmute" onclick="unmuteVolume()">🕨</button>
-                    <button id="increase" onclick="increaseVolume()">+</button>
+                    <button id="decrease" onclick="decreaseVolume()"><img src="remove.png"></button>
+                    <button id="mute" onclick="muteVolume()"><img src="mute.png"/></button>
+                    <button id="increase" onclick="increaseVolume()"><img src="plus.png"></button>
                     
                 </div>
                 
@@ -52,10 +60,13 @@
 
     </body>
     <script type="text/javascript">
-
+    var background = {
+    "Willow": "red",
+    "Champagne problems": "#cfb161"
+    }
     
-        var songs = ["Willow.mp3.","Champange problems.mp3","Blank Space.mp3","We can't stop.mp3","Midnight sky.mp3","Victorious.mp3","Producer man.mp3"];
-        var poster = ["Willow.gif","Willow.jpg","Poster3.jpg","miley.jpg","midnight sky.jpg","victorious.gif","lyn.gif"];
+        var songs = ["Willow.mp3.","Champange problems.mp3","Blank Space.mp3","We can't stop.mp3","Midnight sky.mp3","Victorious.mp3","Producer man.mp3","Duu duu duu duu.mp3","Unholy.mp3","Rain on me.mp3","Imagine.mp3"];
+        var poster = ["Willow.gif","Willow.jpg","Poster3.jpg","miley.jpg","midnight sky.jpg","victorious.gif","lyn.gif","blackpink 1.gif","unholy.gif","rain.png","imagine.jpg"];
         
         var songTitle = document.getElementById("songTitle");
         var fillBar = document.getElementById("fill");
@@ -68,7 +79,9 @@
 
         
         window.onload = playSong;   // it will call the function playSong when window is load
-        
+
+        $("#bg").css("background-color", background[currentSong]);
+
         function playSong(){
             
             song.src = songs[currentSong];  //set the source of 0th song 
@@ -129,7 +142,7 @@
         function next(){
             
             currentSong++;
-            if(currentSong > 6){
+            if(currentSong > 10){
                 currentSong = 0;
             }
             playSong();
@@ -142,7 +155,7 @@
             
             currentSong--;
             if(currentSong < 0){
-                currentSong = 6;
+                currentSong = 10;
             }
             playSong();
             $("#play img").attr("src","Pause.png");
@@ -152,15 +165,11 @@
 
 
         function decreaseVolume(){
-            song.volume -= 0.20; // volume value must be between 0 to 10
+            song.volume -= 0.20; // volume value must be between 0 to 2
         }
 
         function muteVolume(){
-            song.volume -= 1.0;
-        }
-
-        function unmuteVolume(){
-            song.volume += 1.0;
+            song.volume -= 1.0;        
         }
 
 
